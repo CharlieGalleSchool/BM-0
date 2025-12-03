@@ -14,6 +14,6 @@ with open("Settings.json") as data_file:
 		storage_new_Keys[i] = input(settings[i])
 
 	for i in settings.keys():
-		story.replace(i, storage_new_Keys[i])
+		story = story.replace(i, storage_new_Keys[i])
 
 	print(story)
