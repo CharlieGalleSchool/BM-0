@@ -1,7 +1,7 @@
 from tkinter import *
 from tkmacosx import Button
 import numpy
-
+import random
 root = Tk()
 
 root.title("3D Rendering")
@@ -19,10 +19,11 @@ def triangle(points, color):
 	c.create_polygon(points, fill=color)
 
 
+def RenderFrame():
+	c.create_polygon([100,100,200,200,300,300], fill="#476042")
+	triangle([100,100,200,200,300,300], "#476042")
+	root.after(100, RenderFrame)
 
-
-
-triangle([100,100,200,300,300,400], "#476042")
-
+root.after(100, RenderFrame)
 root.mainloop()
 
