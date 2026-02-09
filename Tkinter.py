@@ -26,7 +26,12 @@ def open_file_selection():
 TextBox = Text(root, width=600, height=600)
 
 def New_File():
-	print("new")
+	global currentfile
+	with open("Note.txt", 'w') as file:
+		print("created")
+
+	currentfile = "Note.txt"
+
 
 def Open_File():
 	file = open_file_selection()
